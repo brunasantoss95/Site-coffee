@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Coffee Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- FONTE -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu&family=Style+Script&display=swap" rel="stylesheet">
+
+<!-- icones -->
+<link rel="stylesheet" type="text/css" href="C:\Users\User\Desktop/fontawesome/css/all.min.css">
+
+<style>
+body, html {
+  height: 100%;
+  font-family: 'Noto Serif Telugu', serif;
+  background-color: pink;
+}
+
+p {
+  text-align: justify;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("imagem/faixada1.jpg");
+  min-height: 75%;
+  background-color: #EB927A;
+}
+
+.menu {
+  display: none;
+}
+
+.w3-tag { /* TAGS DE TITULO */
+  background-color:#EB7456;
+  color:#fff;
+  display:inline-block;
+  padding-left:8px;
+  padding-right:8px;
+  text-align:center;
+}
+
+.w3-button:hover{ /*HOVER DO MENU*/
+  color:#000!important;
+  background-color:#EECCC3!important
+}
+
+.w3-black,.w3-hover-black:hover{ /*PRIMEIRA COR DO MENU*/
+  color:#fff!important;
+  background-color:#6B5C58!important;
+}
+
+.w3-dark-grey,.w3-hover-dark-grey:hover,.w3-dark-gray,.w3-hover-dark-gray:hover{color:#fff!important;
+  background-color:#6B4338!important;
+}
+
+.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{
+  color:#000!important;
+  background-color:#EB7456!important;
+}
+
+.w3-text-white,.w3-hover-text-white:hover{
+  color:white!important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-row">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">UM POUCO DE CAFÉ</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">CARDÁPIO</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">LOCAL</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">COFFEE<br>SHOP</span>
+  </div>
+  </header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">UM POUCO DE CAFÉ</span></h5>
+      <p>O Café, uma bebida consumida em vários países, teve sua origem na África, nas terras altas da Etiópia.
+        O nome "café", pode ter sua origem na região de Cafa, sendo atualmente uma das bebidas mais consumidas no mundo.
+        Há diversos tipos de grãos de café e algumas derivações, como o expresso, cappuccino, mocha, café gelado, café com leite, dentre outros.
+      </p>
+
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>
+        "O café é tão grave, tão exclusivista, tão definitivo que não admite acompanhamento sólido. Mas eu o driblo, saboreando, junto com ele, o cheiro das torradas-na-manteiga que alguém pediu na mesa próxima."
+      </i></p>
+      <p> - Mario Quintana</p>
+    </div>
+
+    <img src="imagem/grao.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CARDÁPIO</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+    <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+      <div class="w3-col s6 tablink">Comidas</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+      <div class="w3-col s6 tablink">Bebidas</div>
+    </a>
+      </div>
+  
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Pão de Queijo</h5>
+      <p class="w3-text-grey">R$4,50</p>
+    
+      <h5>Croissant</h5>
+      <p class="w3-text-grey">R$7,00</p>
+    
+      <h5>Quiche</h5>
+      <p class="w3-text-grey">R$7,50</p>
+
+      <h5>Waffle</h5>
+      <p class="w3-text-grey">R$11,00</p>
+    
+      <h5>Cookie</h5>
+      <p class="w3-text-grey">R$3,00</p>
+    
+      <h5>Cheesecake</h5>
+      <p class="w3-text-grey">R$22,00</p>
+    
+      <h5>Brownie com Sorvete</h5>
+      <p class="w3-text-grey">R$13,00</p>
+    
+      <h5>Petit Gateau</h5>
+      <p class="w3-text-grey">R$13,00</p>
+    
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Cappuccino</h5>
+      <p class="w3-text-grey">R$12,00</p>
+    
+      <h5>Mochaccino</h5>
+      <p class="w3-text-grey">R$12,00</p>
+    
+      <h5>Café Expresso</h5>
+      <p class="w3-text-grey">R$9,00</p>
+    
+      <h5>Suco Natural</h5>
+      <p class="w3-text-grey">R$6,00</p>
+    
+      <h5>Refrigerante</h5>
+      <p class="w3-text-grey">R$5,50</p>
+
+      <h5>Água</h5>
+      <p class="w3-text-grey">R$3,50</p>
+    </div>  
+
+    <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="imagem/cafe4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="imagem/croissant.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="imagem/waffle2.jpg" style="width:100%">
+  </div>
+
+   <div class="mySlides fade">
+    <img src="imagem/cafe5.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="imagem/food.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="imagem/cafe3.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <!--</div> -->
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+
+</div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+   showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+</script>
+</div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">LOCALIZAÇÃO</span></h5>
+    <img src="imagem/coffee-shop.jpg" class="w3-image" style="width:100%">
+    <p>
+     Venha viver essa experiência única, num lugar que tem a cara dos amantes de café. Experimente a explosão de sabores que a Coffee Shop proporciona. </p>
+     <p style="text-align: center;">
+      <strong>Será um prazer recebe-lo(a) em nosso espaço.</strong>
+    </p>
+    <p>
+       <!-- MAPA ENDEREÇO --> 
+       <iframe style="border-radius: 5px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110917.36527888662!2d-51.28649710273434!3d-29.68591829999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95194251364dc5e9%3A0xd7dd3c17203b1805!2sBourbon%20Shopping%20Novo%20Hamburgo!5e0!3m2!1spt-BR!2sbr!4v1686976990391!5m2!1spt-BR!2sbr" width="700" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </p>
+    <p style="text-align: center; font-size: 12px;">
+      Av Nações Unidas 2001, Novo Hamburgo
+    </p>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+<p style="text-align: center;">  
+  <!-- ICONES -->
+   <i style="font-size: 38px; padding: 10px; color: white;" class="fa-brands fa-instagram"></i>
+   <i style="font-size: 38px; padding: 10px; color: white;" class="fa-brands fa-facebook"></i>
+   <i style="font-size: 38px; padding: 10px; color: white;" class="fa-brands fa-whatsapp"></i>
+</p>
+<!-- DIREITOS AUTORAIS -->
+<p style="text-align: center; font-size: 12px; color: white;">
+  © COFFEE SHOP - 2023 - Todos os direitos reservados.
+</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
